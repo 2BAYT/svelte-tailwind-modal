@@ -1,0 +1,22 @@
+{
+    "name": "svelte-tailwind-modal",
+    "version": "0.1.0",
+    "description": "Svelte Simple Modal for tailwind projects ",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "rollup -c",
+        "dev": "rollup -c -w"
+    },
+    "keywords": [],
+    "author": "akyuzg",
+    "license": "ISC",
+    "devDependencies": {
+        "rollup": "^2.34.0",
+        "rollup-plugin-node-resolve": "^5.2.0",
+        "rollup-plugin-svelte": "^7.0.0",
+        "svelte": "^3.30.1"
+    },
+
+    "module": "dist/index.mjs",
+    "svelte": "src/index.js"
+}
