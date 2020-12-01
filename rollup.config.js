@@ -6,11 +6,20 @@ const pkg = require('./package.json');
 export default {
         input: 'src/Modal.svelte',
         output: [
-            { file: pkg.module, 'format': 'en' },
-            { file: pkg.main, 'format': 'umd', name: 'Deneme' }
-        ],
+            {
+               file: pkg.main,
+               format: 'cjs',
+               exports: 'default'
+            },
+            {
+              file: pkg.module,
+              format: 'es',
+              exports: 'default'
+            },
+          ],
         plugins: [
             svelte(),
-            resolve()
+            resolve(),
         ],
+        external: ['svelte']
 };
