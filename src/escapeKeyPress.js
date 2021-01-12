@@ -1,7 +1,7 @@
-/** Dispatch event on click outside of node */
+/** Dispatch event when escape pressed */
 export function escapeKeyPress(node) {
 
-    const handleClick = event => {
+    const handleEscape = event => {
         if (event.key == "Escape") {
             node.dispatchEvent(
                 new CustomEvent('escapeKeyPress', node)
@@ -10,11 +10,11 @@ export function escapeKeyPress(node) {
         
     }
     
-    document.addEventListener('keypress', handleClick, true);
+    document.addEventListener('keyup', handleEscape, true);
     
     return {
             destroy() {
-                document.removeEventListener('keypress', handleClick, true);
+                document.removeEventListener('keyup', handleEscape, true);
             }
         }
 }

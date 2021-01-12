@@ -27,14 +27,16 @@
 </script>
 
 {#if visible}
-<div  class="z-40 fixed {autoBottomForMobile ? 'bottom-0' : 'inset-0'} sm:inset-0  flex items-center justify-center">
+<div class="z-40 fixed {autoBottomForMobile ? 'bottom-0' : 'inset-0'} sm:inset-0  flex items-center justify-center">
         
         <div class="fixed inset-0 transition-opacity">
             <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
         </div>
 
-        <div use:clickOutside use:escapeKeyPress on:escapeKeyPress={closeClicked} on:clickOutside={closeClicked} class="{full ? 'flex h-full w-full' :''} transform transition-all " role="dialog" aria-modal="true" aria-labelledby="modal-headline">
+        <div use:clickOutside use:escapeKeyPress  on:escapeKeyPress={closeClicked} on:clickOutside={closeClicked} class="{full ? 'flex h-full w-full' :''} transform transition-all " role="dialog" aria-modal="true" aria-labelledby="modal-headline">
             <slot></slot>
         </div>
     </div>
+
 {/if}
+
