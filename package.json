@@ -1,6 +1,6 @@
 {
     "name": "svelte-tailwind-modal",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "description": "Svelte Simple Modal for tailwind projects ",
     "main": "dist/index.js",
     "scripts": {
