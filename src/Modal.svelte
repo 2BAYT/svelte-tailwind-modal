@@ -13,6 +13,10 @@
         visible = true;
     }
 
+    export function isVisible(){
+       return visible;
+    }
+
     export function hide(){
         visible = false;
     }
@@ -24,7 +28,6 @@
             visible = false;
         }
     }
-
 </script>
 
 {#if visible}
